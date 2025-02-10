@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -90,7 +91,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(img/diploma1.png);
+    background-image: url(../img/diploma1.png);
     background-size: cover;
     gap: 33px;
     color: #fff;
@@ -176,7 +177,7 @@ main h1 span {
 
 .process_filter {
     opacity: .2;
-    background: url(img/processBg.png);
+    background: url(../img/processBg.png);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -390,7 +391,7 @@ main h1 span {
 
 .document_filter {
     opacity: .2;
-    background: url(img/processBg.png);
+    background: url(../img/processBg.png);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -551,3 +552,13 @@ footer nav ul li a {
     font-size: 14px;
     color: rgba(47, 47, 47, 1);
 }
+/* 
+.feedback-modal {
+    transform: scale(0);
+    transition: .3s;
+
+} 
+
+.feedback-modal-active {
+    transform: scale(1);
+} */

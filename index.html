@@ -2,24 +2,33 @@
 <html lang="en">
 
 <head>
+    <title>Прокрас - покраска и огнезащита сооружений</title>
+    <meta content="Прокрас - покраска и огнезащита сооружений" property="og:title" />
+    <meta content="Промышленный альпинизм, покраска и огнезащта высотных зданий сооружений" name="description" />
+    <meta content="Промышленный альпинизм, покраска и огнезащта высотных зданий сооружений" property="og:description" />
+    <meta content="Покраска, огнезажита, покраска фасадов" name="keywords" />
+    <meta content="article" property="og:type" />
+    <meta content="https://prokras.net/" property="og:url" />
+    <meta http-equiv="Content-Language" content="ru">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dc2f3c8121.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
 
-    <title>Prokras</title>
 </head>
 
 <body>
 
     <header>
-        <img src="img/logo.png" alt="logo">
+        <img src="img/logo.png" alt="logo" onclick="window.location = 'index.html'">
         <nav>
             <ul>
-                <li><a href>О компании</a></li>
-                <li><a href>Наши объекты</a></li>
-                <li><a href>Документы</a></li>
-                <li><a href>Контакты</a></li>
+                <li><a href="#about">О компании</a></li>
+                <li><a href="#objects">Наши объекты</a></li>
+                <li><a href="#documents">Документы</a></li>
+                <li><a href="#contact">Контакты</a></li>
             </ul>
         </nav>
         <div class="header-feedback">
@@ -27,7 +36,7 @@
                 <p>+7 (499) 113-22-72</p>
                 <a href="mailto:info@prokras.net">info@prokras.net</a>
             </div>
-            <button class="yellow-btn">Обратный звонок</button>
+            <button class="yellow-btn modal__btn">Обратный звонок</button>
         </div>
     </header>
 
@@ -48,7 +57,7 @@
         </div>
     </main>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="about_content">
             <div class="about_item">
                 <svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -201,7 +210,7 @@
         </div>
     </section>
 
-    <section class="objects">
+    <section class="objects" id="objects">
         <h2>Выполненные объекты</h2>
         <div class="object_block">
             <div class="object_item">
@@ -276,11 +285,11 @@
                     </div>
                 </div>
             </div>
-            <button class="yellow-btn">Все объекты</button>
+            <button class="yellow-btn" onclick="window.location = 'objects.html'">Все объекты</button>
         </div>
     </section>
 
-    <section class="documents">
+    <section class="documents" id="documents">
         <div class="document_filter"></div>
 
         <div class="document_content">
@@ -313,7 +322,7 @@
         </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="contact-left">
             <h2>контакты</h2>
             <div>
@@ -352,7 +361,7 @@
                     <p>+7 (499) 113-22-72</p>
                     <a href="mailto:info@prokras.net">info@prokras.net</a>
                 </div>
-                <button class="yellow-btn">Обратный звонок</button>
+                <button class="yellow-btn modal__btn">Обратный звонок</button>
             </div>
         </div>
     </footer>
@@ -361,8 +370,44 @@
         <span>2025 Все права защищены</span>
     </div>
 
+    <div class="feedback-modal">
+        <div class="feedback-modal-content">
+            <div class="feedback-modal-close" onclick="modalClose()">
+                <i class="fas fa-times"></i>
+            </div>
+            <h2 class="feedback-title">Оставить заявку</h2>
+            <h3 class="feedback-subtitle">Введите данные, и наш эксперт свяжется с вами</h3>
+            <div class="form-group">
+                <form action class="form-inputs" id="feedbackForm" method="POST">
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <div class="modal-form__input">
+                        <div>
+                            <input type="text" id="name" name="name" placeholder="Ваше имя" onfocus="clearError(this)" class="form_input">
+                            <i class="fas fa-user form_icon"></i>
+                        </div>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="modal-form__input">
+                        <div>
+                            <input type="text" id="phone" name="phone" placeholder="+7 (999) 999-99-99"
+                                oninput="formatPhone(this)" onfocus="clearError(this)" class="form_input">
+                            <i class="fas fa-phone phoneSvg form_icon"></i>
+                        </div>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+                    <button class="yellow-btn" type="submit">Отправить</button>
+                    <div id="result"></div>
+                </form>
+                <span class="form-txt">Нажимая на кнопку, вы соглашаетесь с <a href>политикой <br>
+                        конфиденциальности</a></span>
+            </div>
+        </div>
+    </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
