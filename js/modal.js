@@ -29,7 +29,7 @@ modal.onclick = (e) => {
     }
 };
 
-feedbackForm.addEventListener("submit", function(event) {
+feedbackForm.addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form submission
 
     let isValid = true;
@@ -39,7 +39,7 @@ feedbackForm.addEventListener("submit", function(event) {
     let nameError = document.getElementById("nameError");
     let nameWrapper = nameInput.closest('.modal-form__input');
     let nameRegex = /^[a-zA-Zа-яА-ЯёЁ\s]{2,}$/;
-    
+
     if (!nameRegex.test(nameInput.value.trim())) {
         nameError.textContent = "*заполните поле корректно";
         nameWrapper.classList.add('error');
@@ -65,7 +65,11 @@ feedbackForm.addEventListener("submit", function(event) {
     }
 
     if (isValid) {
-        alert("Форма успешно отправлена!"); // Replace with actual form submission logic
+        Swal.fire({
+            title: "Спасибо",
+            text: "Ваша заявка успешно отправлена",
+            icon: "success"
+        });
     }
 });
 
@@ -89,18 +93,17 @@ function formatPhone(input) {
 function clearError(input) {
     let wrapper = input.closest('.modal-form__input');
     let errorMessage = wrapper.querySelector('.error-message');
-    
+
     if (wrapper.classList.contains('error')) {
         wrapper.classList.remove('error');
         errorMessage.textContent = "";
     }
 }
 
-const form = document.getElementById('form');
 const result = document.getElementById('result');
 
-form.addEventListener('submit', function(e) {
-    const formData = new FormData(form);
+feedbackForm.addEventListener('submit', function (e) {
+    const formData = new FormData(feedbackForm);
     e.preventDefault();
 
     const object = Object.fromEntries(formData);
@@ -109,13 +112,13 @@ form.addEventListener('submit', function(e) {
     result.innerHTML = "Please wait..."
 
     fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: json
-        })
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: json
+    })
         .then(async (response) => {
             let json = await response.json();
             if (response.status == 200) {
@@ -129,8 +132,8 @@ form.addEventListener('submit', function(e) {
             console.log(error);
             result.innerHTML = "Something went wrong!";
         })
-        .then(function() {
-            form.reset();
+        .then(function () {
+            feedbackForm.reset();
             setTimeout(() => {
                 result.style.display = "none";
             }, 3000);
