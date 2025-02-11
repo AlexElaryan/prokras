@@ -212,6 +212,7 @@ main h1 span {
     flex-direction: column;
     gap: 40px;
     position: relative;
+    overflow: hidden;
 }
 
 .process_tabs {
@@ -237,22 +238,19 @@ main h1 span {
     background: rgba(254, 183, 0, 1);
 }
 
+.process_box {
+    width: 400%;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+}
+
 .process_block {
     width: fit-content;
     max-width: 1170px;
     margin: auto;
     display: flex;
     gap: 73px;
-    transition: .5s;
-    opacity: 0;
-    position: absolute;
-    transform: scale(0);
-}
-
-.process_block.process_block-active {
-    position: unset;
-    transform: scale(1);
-    opacity: 1;
 }
 
 .process_block-left {

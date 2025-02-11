@@ -1,12 +1,11 @@
 const tab = document.querySelectorAll('.process-tab-item');
-const processBlocks = document.querySelectorAll('.process_block');
+const processBox = document.querySelector('.process_box');
 
 tab.forEach((el, ind) => {
     el.onclick = () => {
+        processBox.style.transform = `translateX(${ind * (-25)}%)`;
         tab.forEach(c => { c.classList.remove('active-tab') });
-        processBlocks.forEach(k => { k.classList.remove('process_block-active') });
         el.classList.add('active-tab');
-        processBlocks[ind].classList.add('process_block-active');
     }
 });
 
