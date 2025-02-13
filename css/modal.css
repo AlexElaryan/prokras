@@ -64,7 +64,7 @@
     align-items: flex-start;
 }
 
-.modal-form__input > div {
+.modal-form__input>div {
     width: 100%;
     position: relative;
 }
@@ -77,7 +77,7 @@
     color: #BDBEC0;
 }
 
-.form_input:focus + .form_icon {
+.form_input:focus+.form_icon {
     color: #6A6A6A;
 }
 
@@ -192,4 +192,28 @@
 
 .feedback-modal-close:hover {
     border-color: #6A6A6A;
+}
+
+@media screen and (max-width:1200px) {
+    .feedback-title {
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+
+    .feedback-subtitle, .form-txt {
+        font-size: 12px;
+    }
+
+    .feedback-modal-content {
+        padding: 50px 30px;
+    }
+
+    .modal-form__input input {
+        height: 60px;
+    }
+
+    .form-group button {
+        height: 60px;
+    }
+    
 }

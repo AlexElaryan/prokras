@@ -597,7 +597,7 @@ footer nav ul li a {
     color: rgba(47, 47, 47, 1);
 }
 
-.burger-menu {
+.burger-menu, .bar {
     display: none;
 }
 
@@ -620,6 +620,7 @@ footer nav ul li a {
     }
 
     .bar {
+        display: block;
         font-size: 28px;
         color: rgba(254, 183, 0, 1);
     }
