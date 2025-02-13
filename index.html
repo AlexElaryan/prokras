@@ -38,8 +38,31 @@
             </div>
             <button class="yellow-btn modal__btn">Обратный звонок</button>
         </div>
+        <i class="fas fa-bars bar" onclick="burgerOpen()"></i>
+        <div class="burger-menu">
+            <nav>
+                <ul>
+                    <li><a href="#about">О компании</a></li>
+                    <li><a href="#objects">Наши объекты</a></li>
+                    <li><a href="#documents">Документы</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-feedback">
+                <div>
+                    <p>+7 (499) 113-22-72</p>
+                    <a href="mailto:info@prokras.net">info@prokras.net</a>
+                </div>
+                <button class="yellow-btn modal__btn">Обратный звонок</button>
+            </div>
+            <div class="feedback-modal-close" onclick="burgerClose()">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    
     </header>
 
+    
     <main>
         <div class="main_content">
             <h1><span>Огнезащитная <br>
@@ -53,7 +76,7 @@
                 </svg>
                 <p>Работаем с 2010 года</p>
             </div>
-            <button class="yellow-btn">Бесплатная консультация</button>
+            <button class="yellow-btn modal__btn">Бесплатная консультация</button>
         </div>
     </main>
 
@@ -154,7 +177,7 @@
                                     огнезащиты, соответствующий материал и верно определив
                                     предел огнестойкости конструкций.</p>
                             </div>
-                            <button class="yellow-btn">Бесплатная консультация</button>
+                            <button class="yellow-btn modal__btn">Бесплатная консультация</button>
                         </div>
                         <div class="process_block-right">
                             <img src="img/process1.png" alt="processPicture">
@@ -170,7 +193,7 @@
                                     составов, поможем закупить материал без наценок производителя
                                     или аналогичный по составу продукт.</p>
                             </div>
-                            <button class="yellow-btn">Бесплатная консультация</button>
+                            <button class="yellow-btn modal__btn">Бесплатная консультация</button>
                         </div>
                         <div class="process_block-right">
                             <img src="img/process2.png" alt="processPicture">
@@ -185,7 +208,7 @@
                                     с применением разных видов спецтехники без нарушения
                                     сроков заказчика</p>
                             </div>
-                            <button class="yellow-btn">Бесплатная консультация</button>
+                            <button class="yellow-btn modal__btn">Бесплатная консультация</button>
                         </div>
                         <div class="process_block-right">
                             <img src="img/process3.png" alt="processPicture">
@@ -201,7 +224,7 @@
                                     в бюджетном учреждении МЧС РФ и гарантируем
                                     положительное решение по договору.</p>
                             </div>
-                            <button class="yellow-btn">Бесплатная консультация</button>
+                            <button class="yellow-btn modal__btn">Бесплатная консультация</button>
                         </div>
                         <div class="process_block-right">
                             <img src="img/process4.png" alt="processPicture">
@@ -216,7 +239,36 @@
         <h2>Выполненные объекты</h2>
         <div class="object_block">
             <div class="object_item">
-                <img src="img/obj1.jpg" alt="objectPicture">
+                <div class="object_slide-pictures">
+                    <img src="img/obj1.jpg" alt="objectPicture">
+                    <div class="object-swiper-box">
+                        <div class="swiper objects-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="img/obj1.jpg" alt="obj"></div>
+                                <div class="swiper-slide"><img src="img/obj2.jpg" alt="obj"></div>
+                                <div class="swiper-slide"><img src="img/obj3.jpg" alt="obj"></div>
+                                <div class="swiper-slide"><img src="img/obj1.jpg" alt="obj"></div>
+                                <div class="swiper-slide"><img src="img/obj2.jpg" alt="obj"></div>
+                                <div class="swiper-slide"><img src="img/obj3.jpg" alt="obj"></div>
+                                
+                            </div>
+                        </div>
+                        <div class="object-swiper-button object-swiper-button-prev document-swiper-button">
+                            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.041 4.55444L8.03919 13.789C7.88109 13.9512 7.7926 14.1688 7.7926 14.3953C7.7926 14.6218 7.88109 14.8394 8.03919 15.0016L17.041 24.2396C17.1147 24.3153 17.2027 24.3754 17.3 24.4164C17.3972 24.4575 17.5017 24.4786 17.6073 24.4786C17.7129 24.4786 17.8174 24.4575 17.9147 24.4164C18.0119 24.3754 18.1 24.3153 18.1736 24.2396C18.3251 24.0845 18.41 23.8763 18.41 23.6594C18.41 23.4426 18.3251 23.2344 18.1736 23.0792L9.70857 14.3953L18.1736 5.71311C18.3246 5.55807 18.4091 5.3502 18.4091 5.13378C18.4091 4.91735 18.3246 4.70948 18.1736 4.55444C18.1 4.4788 18.0119 4.41868 17.9147 4.37763C17.8174 4.33658 17.7129 4.31543 17.6073 4.31543C17.5017 4.31543 17.3972 4.33658 17.3 4.37763C17.2027 4.41868 17.1147 4.4788 17.041 4.55444Z"
+                                    fill="#D0D0D0" />
+                            </svg>
+                        </div>
+                        <div class="object-swiper-button object-swiper-button-next document-swiper-button">
+                            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.041 4.55444L8.03919 13.789C7.88109 13.9512 7.7926 14.1688 7.7926 14.3953C7.7926 14.6218 7.88109 14.8394 8.03919 15.0016L17.041 24.2396C17.1147 24.3153 17.2027 24.3754 17.3 24.4164C17.3972 24.4575 17.5017 24.4786 17.6073 24.4786C17.7129 24.4786 17.8174 24.4575 17.9147 24.4164C18.0119 24.3754 18.1 24.3153 18.1736 24.2396C18.3251 24.0845 18.41 23.8763 18.41 23.6594C18.41 23.4426 18.3251 23.2344 18.1736 23.0792L9.70857 14.3953L18.1736 5.71311C18.3246 5.55807 18.4091 5.3502 18.4091 5.13378C18.4091 4.91735 18.3246 4.70948 18.1736 4.55444C18.1 4.4788 18.0119 4.41868 17.9147 4.37763C17.8174 4.33658 17.7129 4.31543 17.6073 4.31543C17.5017 4.31543 17.3972 4.33658 17.3 4.37763C17.2027 4.41868 17.1147 4.4788 17.041 4.55444Z"
+                                    fill="#D0D0D0" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
                 <div class="object_item-text">
                     <h3>Строительство снегосплавного пункта по адресу: Москва, Тарный проезд, с. 5</h3>
                     <div>
@@ -238,9 +290,42 @@
                         </div>
                     </div>
                 </div>
+                <div class="object-certificate">
+                    <h3>Заключение по объекту.</h3>
+                    <img src="img/certificate.png" alt="certificate">
+                </div>
             </div>
             <div class="object_item">
-                <img src="img/obj2.jpg" alt="objectPicture">
+                <div class="object_slide-pictures">
+                    <img src="img/obj2.jpg" alt="objectPicture">
+                    <div class="object-swiper-box">
+                        <div class="swiper objects-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="img/obj1.jpg" alt="obj"></div>
+                                <div class="swiper-slide"><img src="img/obj2.jpg" alt="obj"></div>
+                                <div class="swiper-slide"><img src="img/obj3.jpg" alt="obj"></div>
+                                <div class="swiper-slide"><img src="img/obj1.jpg" alt="obj"></div>
+                                <div class="swiper-slide"><img src="img/obj2.jpg" alt="obj"></div>
+                                <div class="swiper-slide"><img src="img/obj3.jpg" alt="obj"></div>
+                                
+                            </div>
+                        </div>
+                        <div class="object-swiper-button object-swiper-button-prev document-swiper-button">
+                            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.041 4.55444L8.03919 13.789C7.88109 13.9512 7.7926 14.1688 7.7926 14.3953C7.7926 14.6218 7.88109 14.8394 8.03919 15.0016L17.041 24.2396C17.1147 24.3153 17.2027 24.3754 17.3 24.4164C17.3972 24.4575 17.5017 24.4786 17.6073 24.4786C17.7129 24.4786 17.8174 24.4575 17.9147 24.4164C18.0119 24.3754 18.1 24.3153 18.1736 24.2396C18.3251 24.0845 18.41 23.8763 18.41 23.6594C18.41 23.4426 18.3251 23.2344 18.1736 23.0792L9.70857 14.3953L18.1736 5.71311C18.3246 5.55807 18.4091 5.3502 18.4091 5.13378C18.4091 4.91735 18.3246 4.70948 18.1736 4.55444C18.1 4.4788 18.0119 4.41868 17.9147 4.37763C17.8174 4.33658 17.7129 4.31543 17.6073 4.31543C17.5017 4.31543 17.3972 4.33658 17.3 4.37763C17.2027 4.41868 17.1147 4.4788 17.041 4.55444Z"
+                                    fill="#D0D0D0" />
+                            </svg>
+                        </div>
+                        <div class="object-swiper-button object-swiper-button-next document-swiper-button">
+                            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.041 4.55444L8.03919 13.789C7.88109 13.9512 7.7926 14.1688 7.7926 14.3953C7.7926 14.6218 7.88109 14.8394 8.03919 15.0016L17.041 24.2396C17.1147 24.3153 17.2027 24.3754 17.3 24.4164C17.3972 24.4575 17.5017 24.4786 17.6073 24.4786C17.7129 24.4786 17.8174 24.4575 17.9147 24.4164C18.0119 24.3754 18.1 24.3153 18.1736 24.2396C18.3251 24.0845 18.41 23.8763 18.41 23.6594C18.41 23.4426 18.3251 23.2344 18.1736 23.0792L9.70857 14.3953L18.1736 5.71311C18.3246 5.55807 18.4091 5.3502 18.4091 5.13378C18.4091 4.91735 18.3246 4.70948 18.1736 4.55444C18.1 4.4788 18.0119 4.41868 17.9147 4.37763C17.8174 4.33658 17.7129 4.31543 17.6073 4.31543C17.5017 4.31543 17.3972 4.33658 17.3 4.37763C17.2027 4.41868 17.1147 4.4788 17.041 4.55444Z"
+                                    fill="#D0D0D0" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
                 <div class="object_item-text">
                     <h3>Строительство молокозавода в п. Раменское ООО “Евромол”</h3>
                     <div>
@@ -262,9 +347,42 @@
                         </div>
                     </div>
                 </div>
+                <div class="object-certificate">
+                    <h3>Заключение по объекту.</h3>
+                    <img src="img/certificate.png" alt="certificate">
+                </div>
             </div>
             <div class="object_item">
-                <img src="img/obj3.jpg" alt="objectPicture">
+                <div class="object_slide-pictures">
+                    <img src="img/obj3.jpg" alt="objectPicture">
+                    <div class="object-swiper-box">
+                        <div class="swiper objects-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="img/obj1.jpg" alt="obj"></div>
+                                <div class="swiper-slide"><img src="img/obj2.jpg" alt="obj"></div>
+                                <div class="swiper-slide"><img src="img/obj3.jpg" alt="obj"></div>
+                                <div class="swiper-slide"><img src="img/obj1.jpg" alt="obj"></div>
+                                <div class="swiper-slide"><img src="img/obj2.jpg" alt="obj"></div>
+                                <div class="swiper-slide"><img src="img/obj3.jpg" alt="obj"></div>
+                                
+                            </div>
+                        </div>
+                        <div class="object-swiper-button object-swiper-button-prev document-swiper-button">
+                            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.041 4.55444L8.03919 13.789C7.88109 13.9512 7.7926 14.1688 7.7926 14.3953C7.7926 14.6218 7.88109 14.8394 8.03919 15.0016L17.041 24.2396C17.1147 24.3153 17.2027 24.3754 17.3 24.4164C17.3972 24.4575 17.5017 24.4786 17.6073 24.4786C17.7129 24.4786 17.8174 24.4575 17.9147 24.4164C18.0119 24.3754 18.1 24.3153 18.1736 24.2396C18.3251 24.0845 18.41 23.8763 18.41 23.6594C18.41 23.4426 18.3251 23.2344 18.1736 23.0792L9.70857 14.3953L18.1736 5.71311C18.3246 5.55807 18.4091 5.3502 18.4091 5.13378C18.4091 4.91735 18.3246 4.70948 18.1736 4.55444C18.1 4.4788 18.0119 4.41868 17.9147 4.37763C17.8174 4.33658 17.7129 4.31543 17.6073 4.31543C17.5017 4.31543 17.3972 4.33658 17.3 4.37763C17.2027 4.41868 17.1147 4.4788 17.041 4.55444Z"
+                                    fill="#D0D0D0" />
+                            </svg>
+                        </div>
+                        <div class="object-swiper-button object-swiper-button-next document-swiper-button">
+                            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.041 4.55444L8.03919 13.789C7.88109 13.9512 7.7926 14.1688 7.7926 14.3953C7.7926 14.6218 7.88109 14.8394 8.03919 15.0016L17.041 24.2396C17.1147 24.3153 17.2027 24.3754 17.3 24.4164C17.3972 24.4575 17.5017 24.4786 17.6073 24.4786C17.7129 24.4786 17.8174 24.4575 17.9147 24.4164C18.0119 24.3754 18.1 24.3153 18.1736 24.2396C18.3251 24.0845 18.41 23.8763 18.41 23.6594C18.41 23.4426 18.3251 23.2344 18.1736 23.0792L9.70857 14.3953L18.1736 5.71311C18.3246 5.55807 18.4091 5.3502 18.4091 5.13378C18.4091 4.91735 18.3246 4.70948 18.1736 4.55444C18.1 4.4788 18.0119 4.41868 17.9147 4.37763C17.8174 4.33658 17.7129 4.31543 17.6073 4.31543C17.5017 4.31543 17.3972 4.33658 17.3 4.37763C17.2027 4.41868 17.1147 4.4788 17.041 4.55444Z"
+                                    fill="#D0D0D0" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
                 <div class="object_item-text">
                     <h3>Строительство снегосплавного пункта по адресу: Москва, Тарный проезд, с. 5</h3>
                     <div>
@@ -286,7 +404,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="object-certificate">
+                    <h3>Заключение по объекту.</h3>
+                    <img src="img/certificate.png" alt="certificate">
+                </div>
             </div>
+
             <button class="yellow-btn" onclick="window.location = 'objects.html'">Все объекты</button>
         </div>
     </section>
@@ -305,7 +428,6 @@
                     <div class="swiper-slide"><img src="img/certificate.png" alt="certificate"></div>
                     <div class="swiper-slide"><img src="img/certificate.png" alt="certificate"></div>
                 </div>
-
             </div>
             <div class="document-swiper-button-prev document-swiper-button">
                 <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -333,13 +455,13 @@
             </div>
             <div>
                 <span>Номер телефона:</span>
-                <p>+4 (499) 348 88 42</p>
+                <p>+7 (499) 113-22-72</p>
             </div>
             <div>
                 <span>E-mail:</span>
                 <p>info@prokras.net</p>
             </div>
-            <button class="yellow-btn">Бесплатная консультация</button>
+            <button class="yellow-btn modal__btn">Бесплатная консультация</button>
         </div>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2134.5146834752704!2d37.55662027674545!3d55.74761877308227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bc5d89976f9%3A0xc8aa795ef5f7959a!2z0JrRg9GC0YPQt9C-0LLRgdC60LjQuSDQv9GA0L7RgdC_LiwgMTMsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjEyNDg!5e0!3m2!1sru!2sam"
