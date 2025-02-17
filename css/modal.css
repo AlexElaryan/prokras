@@ -13,6 +13,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     padding: 30px;
+    z-index: 111111111111111;
 }
 
 .feedback-modal-active {

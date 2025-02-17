@@ -358,7 +358,7 @@ main h1 span {
 .objects-swiper img {
     width: 100%;
     cursor: pointer;
-    max-height: 200px;
+    height: 200px;
 }
 
 .object-certificate {
@@ -369,8 +369,18 @@ main h1 span {
     gap: 10px;
 }
 
+.object-certificate div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .object-certificate img {
     width: 300px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .object_item h3 {
@@ -464,6 +474,7 @@ main h1 span {
 
 .documents-swiper .swiper-slide img {
     width: 100%;
+    height: 388px;
 }
 
 .document-swiper-button {
@@ -608,7 +619,7 @@ footer nav ul li a {
     }
 
     .objects-swiper img {
-        max-height: 175px;
+        height: 175px;
     }
 }
 
@@ -669,7 +680,7 @@ footer nav ul li a {
     }
 
     .objects-swiper img {
-        max-height: 75px;
+        height: 75px;
     }
 
     .burger-menu ul li a {
@@ -862,5 +873,20 @@ footer nav ul li a {
     }
     .footer-content {
         justify-content: space-between;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .documents-swiper .swiper-slide img {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .documents-swiper .swiper-slide img {
+        height: 150px;
+    }
+    .document-swiper-button {
+        top: 200px;
     }
 }
